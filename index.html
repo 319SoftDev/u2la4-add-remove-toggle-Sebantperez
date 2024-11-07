@@ -1,54 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inbox with Dark Mode</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
     <div id="page" class="container">
+      <!-- Navbar with Dark Mode Toggle -->
       <nav class="navbar pt-5" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <div class="button">Dark Mode</div>
+          <button class="button is-dark" id="darkModeButton">Dark Mode</button>
         </div>
       </nav>
-      
-      <section class="hero">
+
+      <!-- Hero Section with Title and Date -->
+      <section class="hero is-primary">
         <div class="hero-body">
           <p id="heading" class="title has-text-centered">Your Inbox</p>
           <p id="subheading" class="subtitle has-text-centered">Today is September 1st</p>
         </div>
       </section>
 
-      <div id="action-buttons" class="hidden">
-        <button class="button">Delete Message(s)</button>
-        <button class="button">Mark as Read</button>
+      <!-- Action Buttons for Selected Message -->
+      <div id="action-buttons" class="hidden has-text-centered">
+        <button class="button is-danger">Delete Message(s)</button>
+        <button class="button is-info">Mark as Read</button>
       </div>
 
-      <section id="inbox" class="hero mt-5">
-        <div class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center">
+      <!-- Inbox Section -->
+      <section id="inbox" class="mt-5">
+        <div
+          class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center"
+        >
           <div id="inbox-heading" class="is-flex is-align-items-center">
             <div id="checkbox" class="mr-5">
               <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" />
               </label>
             </div>
             <div id="sender">
-              <p class="title mr-2">
-                Michael Messenger
-              </p>
-              <p class="subtitle px-4">
-                Tomorrow's Event Details
-              </p>
+              <p class="title mr-2">Michael Messenger</p>
+              <p class="subtitle px-4">Tomorrow's Event Details</p>
             </div>
           </div>
           <div id="inbox-buttons">
-            <button id="open-button" class="button">Open</button>
-            <button id="reply-button" class="button">Reply</button>
-            <button id="mark-button" class="button hidden">Mark as Unread</button>
+            <button id="open-button" class="button is-success">Open</button>
+            <button id="reply-button" class="button is-warning">Reply</button>
+            <button id="mark-button" class="button is-link hidden">Mark as Unread</button>
           </div>
         </div>
+
+        <!-- Inbox Message Content (Hidden by Default) -->
         <section id="inbox-message" class="section hidden pb-0 mb-5">
           <div class="card">
             <div class="card-content is-flex is-justify-content-space-between">
@@ -61,38 +69,39 @@
                   <li>08:30 pm - After Party</li>
                   <li>12:00 am - Doors Close</li>
                 </ol>
-                Best, <br>
+                Best, <br />
                 Michael Messenger
               </div>
-              <div id="close" class="content">X</div>
+              <div id="close" class="content is-clickable">X</div>
             </div>
           </div>
         </section>
+
+        <!-- Reply Section (Hidden by Default) -->
         <section id="reply-message" class="section hidden">
           <div id="reply-buttons" class="mb-2">
-            <button id="send-button" class="button">Send Message</button>
-            <button id="cancel-button" class="button">Cancel</button>
+            <button id="send-button" class="button is-primary">Send Message</button>
+            <button id="cancel-button" class="button is-danger">Cancel</button>
           </div>
-          
+
           <textarea class="textarea" placeholder="Type your message here" rows="5"></textarea>
         </section>
       </section>
 
-      <section id="inbox" class="hero mt-1 is-read">
-        <div class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center">
+      <!-- Read Inbox Section -->
+      <section id="inbox-read" class="hero mt-1 is-read">
+        <div
+          class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center"
+        >
           <div id="inbox-heading" class="is-flex is-align-items-center">
             <div id="checkbox" class="mr-5">
               <label class="checkbox">
-                <input type="checkbox" disabled>
+                <input type="checkbox" disabled />
               </label>
             </div>
             <div id="sender">
-              <p class="title mr-2">
-                Igor Ignoreme
-              </p>
-              <p class="subtitle px-4">
-                Ignore this message
-              </p>
+              <p class="title mr-2">Igor Ignoreme</p>
+              <p class="subtitle px-4">Ignore this message</p>
             </div>
           </div>
           <div id="inbox-buttons">
@@ -102,11 +111,8 @@
           </div>
         </div>
       </section>
-      
     </div>
-    
-    <!--Connect your script here-->
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
   </body>
 </html>

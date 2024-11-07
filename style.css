@@ -1,46 +1,73 @@
-body {
-  background-color: #eeeeee;
-  height: 100vh;
-}
-.navbar{
-  background-color: #eeeeee;
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-#heading:hover{
-  text-shadow: 2px 2px lightgrey;
-  cursor: pointer;
-  user-select: none;
+.hero.is-primary {
+  background-color: #00d1b2 !important;
 }
 
-#subheading:hover{
-  text-shadow: 2px 2px lightgrey;
-  cursor: pointer;
-  user-select: none;
+button.is-dark {
+  background-color: #363636;
+  color: white;
 }
 
-#inbox {
-  background-color: white;
-} #inbox:hover {
-  box-shadow: 1px 1px 3px 1px;
-}
-#close:hover{
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
+button.is-dark:hover {
+  background-color: #4e4e4e;
 }
 
-.blue-text {
-  color: blue;
-} 
-
-.is-read {
-  background-color: #dddddd !important;
+textarea {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.is-selected {
-  background-color: rgb(117, 186, 255) !important;
+.card {
+  background-color: #f7f7f7;
+}
+
+.card-content {
+  padding: 1.5rem;
 }
 
 .hidden {
   display: none;
+}
+
+button.is-primary, button.is-info, button.is-warning, button.is-danger {
+  transition: background-color 0.3s ease;
+}
+
+button.is-primary:hover {
+  background-color: #4a8aef;
+}
+
+button.is-info:hover {
+  background-color: #209cee;
+}
+
+button.is-warning:hover {
+  background-color: #ffdd57;
+}
+
+button.is-danger:hover {
+  background-color: #ff3860;
+}
+
+.is-clickable {
+  cursor: pointer;
+}
+
+.is-justify-content-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.is-align-items-center {
+  align-items: center;
 }
